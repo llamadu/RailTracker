@@ -1,0 +1,56 @@
+html, body {
+    background-color: #524f4f;
+    margin: 10px;
+    padding: 15px;
+  }
+  
+  /* .container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    grid-gap: 1px;
+  } */
+  
+  .container {
+    background-color: #81818a;
+    color: #721c24;
+    }
+  
+ .card-header{
+      color: #721c24;
+      font-weight: bold;
+      font-size: 1vw;
+  }
+ 
+  
+  .form-group {
+    margin: 3px;
+  }
+   
+ 
+.jumbotron {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    text-align: center;
+    font-size: 1vw;
+    align-items: center;
+    color: #6c757d;
+    font-weight: bolder;
+    /* width: 300px; */
+}
+
+  #currentTrainSchedule {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    font-size: 1vw;
+  }
+  
+  #addTrain {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    text-align: left;
+    font-size: 1vw;
+  }
