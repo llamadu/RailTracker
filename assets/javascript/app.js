@@ -1,16 +1,19 @@
-$(document).ready(function(){
-    var config = {
-        apiKey: "AIzaSyBPCAxjycmuYaeY8RISjpPzUOSfmZIbQrQ",
-        authDomain: "train-scheduler-68643.firebaseapp.com",
-        databaseURL: "https://train-scheduler-68643.firebaseio.com",
-        projectId: "train-scheduler-68643",
-        storageBucket: "train-scheduler-68643.appspot.com",
-        messagingSenderId: "934455543386"
-    };
-    firebase.initializeApp(config);
+ var keyArray = [];
+// Your web app's Firebase configuration
+var firebaseConfig = {
+    apiKey: "AIzaSyCi0ja_Wf5DEXU0bk4VxXXMMVg2mtf2YnY",
+    authDomain: "railtracker-83a4f.firebaseapp.com",
+    databaseURL: "https://railtracker-83a4f.firebaseio.com",
+    projectId: "railtracker-83a4f",
+    storageBucket: "",
+    messagingSenderId: "950961234419",
+    appId: "1:950961234419:web:c2f82c833621960c"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
 
-    // A variable to reference the database.
-    var database = firebase.database();
+  var database = firebase.database();
+
   function timeDisplay() {
       var timeNow = moment().format("HH:mm:ss");
       $(".timeNow").text(timeNow)
