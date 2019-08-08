@@ -1,13 +1,13 @@
   var keyArray = [];
 // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyD1LEAjtHAcUDsZE7pIjCy7rESBCPxtwI8",
-    authDomain: "test-2b9ea.firebaseapp.com",
-    databaseURL: "https://test-2b9ea.firebaseio.com",
-    projectId: "test-2b9ea",
-    storageBucket: "test-2b9ea.appspot.com",
-    messagingSenderId: "412208756659",
-    appId: "1:412208756659:web:713378738d600fe0"
+var firebaseConfig = {
+    apiKey: "AIzaSyCi0ja_Wf5DEXU0bk4VxXXMMVg2mtf2YnY",
+    authDomain: "railtracker-83a4f.firebaseapp.com",
+    databaseURL: "https://railtracker-83a4f.firebaseio.com",
+    projectId: "railtracker-83a4f",
+    storageBucket: "",
+    messagingSenderId: "950961234419",
+    appId: "1:950961234419:web:c2f82c833621960c"
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
