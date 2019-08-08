@@ -1,4 +1,6 @@
-  var keyArray = [];
+$(document).ready(function(){
+ 
+ var keyArray = [];
 // Your web app's Firebase configuration
 var firebaseConfig = {
     apiKey: "AIzaSyCi0ja_Wf5DEXU0bk4VxXXMMVg2mtf2YnY",
