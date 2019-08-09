@@ -1,4 +1,5 @@
- var keyArray = [];
+  var keyArray = [];
+
 // Your web app's Firebase configuration
 var firebaseConfig = {
     apiKey: "AIzaSyCi0ja_Wf5DEXU0bk4VxXXMMVg2mtf2YnY",
@@ -21,17 +22,17 @@ var firebaseConfig = {
 
   setInterval(timeDisplay, 1000);
 
-  // submit button
+  // add train button
   $("#submit").on("click", function(event) {
       event.preventDefault();
 
-      // capture input
+      // get user input
       var name = $("#name").val().trim();
       var destination = $("#destination").val().trim();
       var firstTime = $("#firstTime").val().trim();
       var frequency = $("#frequency").val().trim();
 
-      // holding place for train info
+      // hold train data
       var newTrain = {
           name: name,
           destination: destination,
@@ -41,31 +42,31 @@ var firebaseConfig = {
 
       database.ref().push(newTrain);
 
-      // is it working? console.log it!
+      // Logs everything to console
       console.log(newTrain.name);
       console.log(newTrain.destination);
       console.log(newTrain.firstTime);
       console.log(newTrain.frequency);
 
-      // clear 
+      // Clears all of the text-boxes
       $("#name").val("");
       $("#destination").val("");
       $("#firstTime").val("");
       $("#frequency").val("");
   });
 
-  // 3. Create Firebase event for adding train to the database and a row in the html when a user adds an entry
+  // Firebase event for adding train to database and a row  when a user adds train
   database.ref().on("child_added", function(childSnapshot) {
       console.log(childSnapshot.val());
 
-      // Store train info into var
+      // Store everything into a variable.
       var name = childSnapshot.val().name;
       var destination = childSnapshot.val().destination;
       var firstTime = childSnapshot.val().firstTime;
       var frequency = childSnapshot.val().frequency;
 
 
-      // tidy up the firstTime by subtracting 1 year
+      // Tidy the firstTime
       var firstTimeTidy = moment(firstTime, "HH:mm").subtract(1, "years");
 
 
@@ -87,7 +88,8 @@ var firebaseConfig = {
       button.addClass("buttons btn btn-dark btn-sm glyphicon glyphicon-trash");
       //   button.append("Trash");
 
-      // make new row for trains
+
+      // make new row
       var newRow = $(`<tr>`).append(
           $("<td>").text(name),
           $("<td>").text(destination),
@@ -97,16 +99,19 @@ var firebaseConfig = {
           $("<td>").append(button)
       );
 
-      // Append row to the table
+      // Append the new row 
       $("#trainTable > tbody").append(newRow);
 
-      //removing row
+      //removing  rows
       $(document.body).on("click", ".buttons", function() {
           var trainRemove = $(this).attr("remove");
           database.ref().child(trainRemove).remove();
-          //remove opject and update
+          //reload the page with  updated data
           location.reload();
       });
+
+
+
 
 
   });
