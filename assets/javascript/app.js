@@ -1,9 +1,7 @@
   var keyArray = [];
 
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-     // Your web app's Firebase configuration
-  var firebaseConfig = {
+ // Your web app's Firebase configuration
+ var firebaseConfig = {
     apiKey: "AIzaSyCi0ja_Wf5DEXU0bk4VxXXMMVg2mtf2YnY",
     authDomain: "railtracker-83a4f.firebaseapp.com",
     databaseURL: "https://railtracker-83a4f.firebaseio.com",
